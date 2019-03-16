@@ -2,7 +2,7 @@
 #define BLUEFOX2_SINGLE_NODE_H_
 
 #include <mavros_msgs/CommandTriggerControl.h>
-#include <mavros_msgs/CommandTriggerInterval.h>
+// #include <mavros_msgs/CommandTriggerInterval.h>
 
 #include "bluefox2/Bluefox2DynConfig.h"
 #include <camera_base/camera_node_base.h>

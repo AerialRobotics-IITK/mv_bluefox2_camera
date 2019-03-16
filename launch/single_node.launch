@@ -1,6 +1,6 @@
 <launch>
     <!-- Common Interface -->
-    <arg name="device" default="25002796"/>
+    <arg name="device" default="26807376"/>
     <arg name="fps" default="20"/>
 
     <!-- Camera Settings -->
@@ -10,18 +10,18 @@
     <arg name="frame_id" default="$(arg camera)"/>
     <arg name="calib_url" default="file://${ROS_HOME}/camera_info/$(arg camera_name).yaml"/>
 
-    <arg name="idpf" default="0"/>
+    <arg name="idpf" default="9"/>
     <arg name="aec" default="false"/>
-    <arg name="expose_us" default="1500"/>
-    <arg name="agc" default="true"/>
-    <arg name="gain_db" default="0.0"/>
+    <arg name="expose_us" default="20000"/>
+    <arg name="agc" default="false"/>
+    <arg name="gain_db" default="32.0"/>
     <arg name="cbm" default="0"/>
-    <arg name="ctm" default="1"/>                   <!-- trigger mode: 1 (on demand), 3 (hw trigger) -->
+    <arg name="ctm" default="3"/>                   <!-- trigger mode: 1 (on demand), 3 (hw trigger) -->
     <arg name="cts" default="0"/>                   <!-- trigger source -->
-    <arg name="calibration_offset" default="0.0"/>   <!-- kalibr time shift in [s] -->
+    <arg name="calibration_offset" default="0"/>   <!-- kalibr time shift in [s] -->
     <arg name="dcfm" default="0"/>
     <arg name="hdr" default="false"/>
-    <arg name="wbp" default="-1"/>
+    <arg name="wbp" default="1"/>
     <arg name="request" default="0"/>
     <arg name="mm" default="0"/>
     <arg name="jpeg_quality" default="80"/>
@@ -50,6 +50,9 @@
         <param name="dcfm" type="int" value="$(arg dcfm)"/>
         <param name="hdr" type="bool" value="$(arg hdr)"/>
         <param name="wbp" type="int" value="$(arg wbp)"/>
+      <!--  <param name="r_gain" value="2"/>
+        <param name="g_gain" value="2"/>
+        <param name="b_gain" value="2"/> -->
         <param name="request" type="int" value="$(arg request)"/>
         <param name="mm" type="int" value="$(arg mm)"/>
         <param name="image_raw/compressed/jpeg_quality" type="int" value="$(arg jpeg_quality)"/>

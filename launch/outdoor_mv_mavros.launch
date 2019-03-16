@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<launch> 
+    <arg name="cam_fps" default="20"/>
+    <arg name="expose_us" default="2000"/>
+    <arg name="device" default="26807376"/>
+    <!-- <arg name="fcu_url" default="udp://:14540@localhost:14557"/> -->
+
+    <include file="$(find mavros)/launch/px4.launch">
+        <!-- <arg name="fcu_url" default="$(arg fcu_url)"/> -->
+    </include>
+
+    <include file="$(find bluefox2)/launch/outdoor.launch">
+        <arg name="device" value="$(arg device)"/>
+        <arg name="fps" value="$(arg cam_fps)"/>
+        <arg name="expose_us" value="$(arg expose_us)"/>
+        <arg name="ctm" value="3"/>
+        <arg name="calibration_offset" value="-0.184499897778"/>
+    </include>
+
+
+
+
+</launch>

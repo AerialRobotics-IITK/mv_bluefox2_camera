@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/home/gajen/catkin_ws/devel/include",
+                "/opt/ros/kinetic/include",
+                "/home/gajen/catkin_ws/src/mv_bluefox2_camera/include",
+                "/home/gajen/catkin_ws/src/camera_base/include",
+                "/home/gajen/catkin_ws/src/mavros/libmavconn/include",
+                "/home/gajen/catkin_ws/src/mavros/mavros/include",
+                "/home/gajen/catkin_ws/src/mavros/mavros_msgs/include",
+                "/home/gajen/catkin_ws/src/mavros/test_mavros/include",
+                "/usr/include"
+            ],
+            "name": "Linux",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}
